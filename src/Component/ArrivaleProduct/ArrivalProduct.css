@@ -14,9 +14,7 @@
   position: relative;
   transition: all 0.3s linear;
 }
-.image:hover {
-  transform: scale(1.1);
-}
+
 .stock-sale {
   position: absolute;
   top: 20px;

@@ -1,0 +1,36 @@
+.sale-furniture-main {
+  margin: 100px auto;
+  width: 90%;
+}
+.sale-furniture-main .image {
+  position: relative;
+}
+.sale-furniture-main .image .image-info {
+  position: absolute;
+  top: 91px;
+  left: 333px;
+  font-family: "Poppins";
+}
+.sale-furniture-main .image .image-info1 {
+  position: absolute;
+  font-family: "Poppins";
+  left: 40px;
+  top: 91px;
+}
+
+@media only screen and (max-width: 668px) {
+  .sale-furniture-main .image .image-info {
+    top: 63px;
+    left: 205px;
+  }
+  .sale-furniture-main .image .image-info h2 {
+    font-size: 19px;
+  }
+  .sale-furniture-main .image .image-info1 h2 {
+    font-size: 19px;
+  }
+  .sale-furniture-main .image .image-info1 {
+    left: 16px;
+    top: 82px;
+  }
+}

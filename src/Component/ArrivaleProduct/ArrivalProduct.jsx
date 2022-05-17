@@ -4,7 +4,6 @@ import './ArrivalProduct.css'
 const ArrivalProduct = ({ products }) => {
     const { name, img, sale, beforePrice, price, stock } = products;
 
-    console.log(products);
     return (
         <div>
             <div className="col">

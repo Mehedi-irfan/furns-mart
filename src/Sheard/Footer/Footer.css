@@ -1,0 +1,132 @@
+.footer-section {
+  margin-top: 120px;
+  background-color: rgb(47, 51, 58);
+  padding: 70px 0px;
+}
+.frist-row h3 {
+  color: #fff;
+  font-size: 22px;
+  letter-spacing: 0.8px;
+  font-family: "Courier New", Courier, monospace;
+}
+.frist-row p {
+  color: #fff;
+  font-size: 17px;
+  letter-spacing: 0.6px;
+  line-height: 25px;
+  margin-top: 27px;
+  font-family: "Poppins";
+}
+.frist-row ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+.frist-row ul li a {
+  text-decoration: none;
+  color: rgb(219, 214, 214);
+  text-decoration: none;
+  color: rgb(219, 214, 214);
+  font-size: 18px;
+  padding: 2px 10px;
+  transition: all 0.6s linear;
+}
+.frist-row ul li a:hover {
+  color: rgba(255, 114, 4, 1);
+}
+/* second row  */
+.second-row {
+  margin-left: 50px;
+}
+.second-row h4 {
+  color: #fff;
+  font-size: 22px;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 0.8px;
+}
+.second-row ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 27px;
+}
+.second-row ul li {
+  padding: 7px 0;
+  transition: all 0.5s linear;
+}
+.second-row ul li:first-child {
+  padding-top: 0px !important;
+}
+.second-row ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s linear;
+  letter-spacing: 0.8px;
+  font-family: "Poppins";
+}
+.second-row ul li:hover {
+  transform: translateX(5px);
+}
+.second-row ul li a:hover {
+  color: rgba(255, 114, 4, 1);
+}
+/* fourth row  */
+.fourth-row {
+  margin-left: 50px;
+}
+.fourth-row h4 {
+  color: #fff;
+  font-size: 22px;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 0.8px;
+}
+.fourth-row input {
+  margin-top: 27px;
+  margin-top: 27px;
+  width: 100%;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 5px 12px;
+  outline: none;
+}
+.fourth-row input:focus {
+  outline: none;
+  color: #fff;
+}
+.fourth-row input::placeholder {
+  color: #fff;
+  letter-spacing: 0.8px;
+  font-family: "Poppins";
+}
+.fourth-row button {
+  margin-top: 18px;
+  border: 1px solid transparent;
+  background: rgba(255, 114, 4, 1);
+  color: #fff;
+  padding: 12px 36px;
+  letter-spacing: 0.8px;
+  font-family: "Poppins";
+  transition: all 0.6s ease-in;
+}
+.fourth-row button:hover {
+  background-color: #000;
+  color: rgba(255, 114, 4, 1);
+}
+/* second footer  */
+.second-footer {
+  background-color: #222;
+}
+.second-footer p {
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  padding: 13px 0px;
+  letter-spacing: 2px;
+  font-family: "Poppins";
+}
+.second-footer span {
+  font-family: cursive;
+  color: rgba(255, 114, 4, 1);
+  font-size: 16px;
+  font-weight: 700;
+}

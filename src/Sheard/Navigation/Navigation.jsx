@@ -18,9 +18,9 @@ const Navigation = () => {
                     <div className="nav-icon" data-aos="fade-left"
                         data-aos-easing="ease-in"
                         data-aos-duration="1000">
-                        <i className="fa-solid fa-magnifying-glass"></i>
-                        <i className="fa-regular fa-user"></i>
-                        <i className="fa-regular fa-cart-shopping"></i>
+                        <i className="bi bi-search"></i>
+                        <i className="bi bi-person"></i>
+                        <i className="bi bi-bag"></i>
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@ const Navigation = () => {
                     </ul>
                 </nav>
             </div>
-        </div>
+        </div >
     );
 };
 

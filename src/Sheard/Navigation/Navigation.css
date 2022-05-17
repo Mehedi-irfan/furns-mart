@@ -5,11 +5,12 @@
 }
 .nav-icon i {
   margin: 0px 10px;
-  font-size: 22px;
+  font-size: 18px;
   border-right: 2px solid #aaa;
   padding-right: 18px;
   color: #222;
 }
+
 .nav-icon i:last-child {
   border-right: none;
 }
@@ -19,8 +20,6 @@
 .main-header {
   height: 50px;
   width: 100%;
-  /* position: fixed; */
-  box-shadow: rgb(0 0 0 / 30%) 0px 0px 10px 0px;
   background-color: rgb(47, 51, 58);
   margin-top: 20px;
 }
@@ -48,8 +47,7 @@
 }
 .dropdwon-button:hover .dropdown-menubar {
   display: block !important;
-  transition: all 0.3s ease-in;
-  opacity: 1 !important;
+  transform: translateY(0px);
 }
 .dropdwon-button1:hover .dropdown-menubar1 {
   display: block !important;
@@ -71,17 +69,23 @@
   flex-direction: column !important;
   height: 124px !important;
   top: 50px;
-  padding: 5px 40px !important;
+  padding: 0;
   display: none !important;
-  opacity: 0 !important;
-  transition: all 0.3s ease-in;
+  transform: translateY(-125px);
   box-shadow: 0px 0px 10px #999898;
   border-radius: 5px;
+  transition: all 0.6s linear;
+  cursor: pointer;
 }
 .dropdown-menubar li {
   font-weight: 450;
   letter-spacing: 0.6px;
-  border-bottom: 1px solid #222;
+  padding: 5px 40px !important;
+  border-bottom: 1px solid #ff7004;
+}
+
+.dropdown-menubar li:hover {
+  color: #ff7004;
 }
 .dropdown-menubar1 {
   background: #fff;
@@ -90,17 +94,19 @@
   flex-direction: column !important;
   height: 124px !important;
   top: 50px;
-  padding: 5px 40px !important;
+  padding: 0;
   display: none !important;
-  opacity: 0;
-  transition: all 0.3s ease-in;
   box-shadow: 0px 0px 10px #999898;
   border-radius: 5px;
 }
 .dropdown-menubar1 li {
   font-weight: 450;
+  padding: 5px 40px !important;
   letter-spacing: 0.6px;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid #ff7004;
+}
+.dropdown-menubar1 li:hover {
+  color: #ff7004;
 }
 .dropdown-menubar2 {
   background: #fff;
@@ -109,17 +115,19 @@
   flex-direction: column !important;
   height: 100px !important;
   top: 50px;
-  padding: 5px 40px !important;
   display: none !important;
-  opacity: 0;
-  transition: all 0.3s ease-in;
+  padding: 0;
   box-shadow: 0px 0px 10px #999898;
   border-radius: 5px;
 }
 .dropdown-menubar2 li {
   font-weight: 450;
   letter-spacing: 0.6px;
-  border-bottom: 1px solid #222;
+  padding: 5px 40px !important;
+  border-bottom: 1px solid #ff7004;
+}
+.dropdown-menubar2 li:hover {
+  color: #ff7004;
 }
 
 @media screen and (max-width: 668px) {

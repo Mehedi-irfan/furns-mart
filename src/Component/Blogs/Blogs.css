@@ -1,0 +1,58 @@
+.author-date {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+}
+#cards {
+  background-color: rgb(244, 245, 248);
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s linear;
+}
+#cards:hover {
+  transform: translateY(-8px);
+}
+.image {
+  overflow: hidden;
+}
+.image img {
+  /* overflow: hidden; */
+  transition: all 0.4s linear;
+}
+.image img:hover {
+  transform: scale(1.1);
+}
+#card-title {
+  font-size: 20px;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+  font-family: "Poppins";
+  padding: 12px 0 0px;
+}
+#card-desc {
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 25px;
+}
+.author-date p {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  color: rgb(109, 109, 109);
+}
+.author-date p:last-child {
+  margin-left: 20px;
+}
+.read-more-btn button {
+  margin: 6px 19px 30px;
+  padding: 12px 39px;
+  border: none;
+  color: #fff;
+  background: #222;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+  transition: all 0.4s ease-in;
+}
+.read-more-btn button:hover {
+  background-color: rgba(225, 114, 4, 1);
+}
