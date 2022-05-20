@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import logo from '../../asstes/images/logo.png';
 import './Navigation.css';
 
-const Navigation = () => {
+const Navigation = ({ filterData }) => {
     const [showNavbar, setShowNavbar] = useState(false);
+
     return (
         <div>
             <div className='container mt-4'>
@@ -31,22 +32,22 @@ const Navigation = () => {
                         <li><Link to='/about'>About</Link></li>
                         <li className='dropdwon-button'><Link to='/homeFurniture'>Home Furniture</Link>
                             <ul className='dropdown-menubar'>
-                                <li>Bedroom</li>
-                                <li>Dining</li>
-                                <li>Living</li>
+                                <li><button onClick={() => filterData('bedroom')}>Bedroom</button></li>
+                                <li><button onClick={() => filterData('dining')}>Dinig</button></li>
+                                <li><button onClick={() => filterData('living')}>Living</button></li>
                             </ul>
                         </li>
                         <li className='dropdwon-button1'><Link to='/hospitalFurniture'>Hospital Furniture</Link>
                             <ul className='dropdown-menubar1'>
-                                <li>Lounge</li>
-                                <li>Office Chair</li>
-                                <li>Office Tabel</li>
+                                <li><Link to='/lounge'>Lounge</Link></li>
+                                <li><Link to='/officeChair'>Office Chair</Link></li>
+                                <li><Link to='/officeTabel'>Office Tabel</Link></li>
                             </ul>
                         </li>
                         <li className='dropdwon-button2'><Link to='/officeFurniture'>Office Furniture</Link>
                             <ul className='dropdown-menubar2'>
-                                <li>Hospital Bed</li>
-                                <li>Hospital Utility</li>
+                                <li><Link to='/hospitalBed'>Hospital Bed</Link></li>
+                                <li><Link to='/hospitalUtility'>Hospital Utility</Link></li>
                             </ul>
                         </li>
                         <li><Link to='/contact'>Contact</Link></li>

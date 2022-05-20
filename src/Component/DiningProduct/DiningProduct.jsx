@@ -1,12 +1,10 @@
 import React from 'react';
-import './ArrivalProduct.css'
 
-const ArrivalProduct = ({ products }) => {
-    const { name, img, sale, beforePrice, price, stock } = products;
-
+const DiningProduct = ({ productData }) => {
+    const { title, img, sale, stock, price } = productData;
     return (
         <>
-            <div className="col">
+            <div className="col-md-3 col-sm-6">
                 <div className="arrivale-card w-100">
                     <div className="image">
                         <img className='img-fluid rounded-3 w-100' src={img} alt="" />
@@ -28,8 +26,8 @@ const ArrivalProduct = ({ products }) => {
                         </div>
                     </div>
                     <div className="card-content text-center mt-3">
-                        <h6>{name}</h6>
-                        <h5 className='d-inline-flex'><p className='text-decoration-line-through fw-lighter text-secondary'>{beforePrice}</p> <p className='price'>${price}</p></h5>
+                        <h6>{title.slice(0, 20)}</h6>
+                        <h5 className='d-inline-flex'><p className='text-decoration-line-through fw-lighter text-secondary'></p> <p className='price'>${price}</p></h5>
                     </div>
                 </div>
             </div>
@@ -37,4 +35,4 @@ const ArrivalProduct = ({ products }) => {
     );
 };
 
-export default ArrivalProduct;
+export default DiningProduct;

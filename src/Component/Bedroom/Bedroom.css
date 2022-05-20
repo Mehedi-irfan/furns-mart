@@ -1,0 +1,39 @@
+.bedroom-products .bedroom-filter-bar {
+  width: 90%;
+  margin: 80px 50px auto;
+  background-color: rgb(244, 245, 248);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+.bedroom-filter-bar h6 {
+  letter-spacing: 0.6px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.sort-by {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sort-by select {
+  width: 200px;
+  padding: 8px 5px;
+  border: 1px solid transparent;
+  outline: none;
+}
+.sort-by select:focus {
+  outline: none;
+  border: 1px solid rgba(255, 114, 4, 1);
+}
+.sort-by select option {
+  color: #222;
+  border: none;
+}
+.sort-by h6 {
+  padding-right: 10px;
+}
+.bedroom-all-products {
+  width: 90%;
+  margin: 80px auto;
+}

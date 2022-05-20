@@ -10,14 +10,21 @@ import NewArrible from './Component/NewArrible/NewArrible';
 import Features from './Component/Features/Features';
 import OnSale from './Component/OnSale/OnSale';
 import Teanding from './Component/Teanding/Teanding';
+import Bedroom from './Component/Bedroom/Bedroom';
+import Dining from './Component/Dining/Dining';
+import Living from './Component/Living/Living';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/home' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/homeFurniture' element={<HomeFurniture />} />
+        <Route path='/bedroom' element={<Bedroom></Bedroom>} />
+        <Route path='/dining' element={<Dining></Dining>} />
+        <Route path='/living' element={<Living></Living>} />
         <Route path='/hospitalFurniture' element={<HospitalFurniture />} />
         <Route path='/officeFurniture' element={<OfficeFurniture />} />
         <Route path='/contact' element={<Contact />} />
