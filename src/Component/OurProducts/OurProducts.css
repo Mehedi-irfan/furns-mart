@@ -29,16 +29,23 @@
   letter-spacing: 0.6px;
   font-weight: 500;
 }
-.product-arrivale ul li a {
+.product-arrivale ul li button {
   text-decoration: none;
+  border: none;
+  background-color: transparent;
   color: #000;
   transition: all 0.6s linear;
 }
-.product-arrivale ul li a:hover {
+/* .product-arrivale ul li:first-child {
+  color: rgba(255, 112, 4, 1);
+} */
+.product-arrivale ul li button:hover {
   color: rgba(255, 112, 4, 1);
 }
-.product-arrivale ul li a:focus {
+.product-arrivale ul li button:focus {
   color: rgba(255, 112, 4, 1);
+  border: none;
+  outline: none;
 }
 @media only screen and (max-width: 668px) {
   .prodcut-title h2 {
@@ -53,5 +60,9 @@
   .product-arrivale ul li {
     font-size: 15px;
     padding: 8px 10px;
+  }
+  .product-arrivale ul li button {
+    font-size: 14px;
+    padding: 0px;
   }
 }

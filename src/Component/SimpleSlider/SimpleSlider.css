@@ -1,0 +1,89 @@
+.slider-section {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #e7e7e7;
+  height: auto;
+}
+#silder-contect-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 50px;
+}
+.slider-img img {
+  width: 85%;
+  margin-left: 50px;
+}
+.slider-contetn {
+  margin-left: 30px;
+}
+.slider-contetn h2 {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  color: #424141;
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+}
+.slider-contetn h1 {
+  font-size: 5.8rem;
+  font-weight: 900;
+  font-family: "Times New Roman", Times, serif;
+}
+.slider-contetn p {
+  font-size: 1.2rem;
+}
+.slider-contetn button {
+  background-color: rgba(255, 114, 4, 1);
+  border: none;
+  color: #fff;
+  padding: 12px 35px;
+  margin-top: 20px;
+  outline: none;
+  transition: all 0.6s ease;
+}
+.slider-contetn button:hover {
+  background-color: #222;
+}
+.slick-dots li button:before {
+  font-family: "slick";
+  font-size: 18px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "•";
+  text-align: center;
+  opacity: 0.25;
+  color: #ff6d05;
+  margin-top: -50px;
+}
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #f76007;
+}
+@media only screen and (max-width: 668px) {
+  #silder-contect-section {
+    padding: 40px 30px;
+  }
+  .slider-contetn {
+    margin-left: 0px;
+  }
+  .slider-contetn h2 {
+    font-size: 22px;
+  }
+  .slider-contetn h1 {
+    font-size: 40px;
+  }
+  .slider-contetn p {
+    font-size: 15px;
+  }
+  .slider-contetn button {
+    margin: 0;
+    padding: 5px 60px;
+  }
+  .slider-img img {
+    width: 95%;
+    margin-left: 0px;
+  }
+}

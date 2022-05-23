@@ -70,3 +70,8 @@
   padding: 0px 13px;
   border-radius: 5px;
 }
+@media only screen and (max-width: 668px) {
+  .cart-button {
+    left: 80%;
+  }
+}

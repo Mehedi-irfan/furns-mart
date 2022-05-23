@@ -10,31 +10,27 @@ import NewArrible from './Component/NewArrible/NewArrible';
 import Features from './Component/Features/Features';
 import OnSale from './Component/OnSale/OnSale';
 import Teanding from './Component/Teanding/Teanding';
-import Bedroom from './Component/Bedroom/Bedroom';
-import Dining from './Component/Dining/Dining';
-import Living from './Component/Living/Living';
+import CategoryWiseFurniture from './Component/CategoryWiseFurniture/CategoryWiseFurniture';
+import Navigation from './Sheard/Navigation/Navigation';
+import Footer from './Sheard/Footer/Footer';
+import CartButton from './Component/CartButton/CartButton';
 
 function App() {
   return (
     <BrowserRouter>
+      <Navigation />
+      <CartButton />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/homeFurniture' element={<HomeFurniture />} />
-        <Route path='/bedroom' element={<Bedroom></Bedroom>} />
-        <Route path='/dining' element={<Dining></Dining>} />
-        <Route path='/living' element={<Living></Living>} />
-        <Route path='/hospitalFurniture' element={<HospitalFurniture />} />
-        <Route path='/officeFurniture' element={<OfficeFurniture />} />
+        <Route path='/' element={<HomeFurniture />} />
+        <Route path='/category/:categoryId' element={<CategoryWiseFurniture></CategoryWiseFurniture>} />
+        <Route path='/' element={<HospitalFurniture />} />
+        <Route path='/' element={<OfficeFurniture />} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/' element={<Home />}>
-          <Route path='newArrible' element={<NewArrible />} />
-          <Route path='featured' element={<Features />} />
-          <Route path='onSale' element={<OnSale />} />
-          <Route path='tending' element={<Teanding />} />
-        </Route>
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

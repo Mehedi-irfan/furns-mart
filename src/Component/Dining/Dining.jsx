@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Footer from '../../Sheard/Footer/Footer';
 import Navigation from '../../Sheard/Navigation/Navigation';
 import DiningProduct from '../DiningProduct/DiningProduct';
 
 const Dining = () => {
     const [bedroomProduct, setBedroomProduct] = useState([]);
-    const [showProduct, setShowProduct] = useState('')
+    // const [showProduct, setShowProduct] = useState([])
     useEffect(() => {
         fetch('./Produtcs.JSON')
             .then(res => res.json())
@@ -17,7 +18,7 @@ const Dining = () => {
 
     const filterData = (cate) => {
         const filterProduct = bedroomProduct.filter((product) => product.category === cate)
-        setShowProduct(filterProduct);
+        setBedroomProduct(filterProduct);
     }
 
     return (
@@ -28,12 +29,12 @@ const Dining = () => {
                 <div className="about-link">
                     <Link to='/'>HOME</Link>   /
                     <Link to='/'>   COLLECTION</Link>   /
-                    <Link to='/'>   Dining</Link>
+                    <Link to='/'>   DINING</Link>
                 </div>
             </div>
             <div className="bedroom-products">
                 <div className="bedroom-filter-bar">
-                    <h6>Showing {showProduct.length} Products</h6>
+                    <h6>Showing {bedroomProduct?.length} Products</h6>
                     <div className='sort-by'>
                         <h6>Sort by</h6>
                         <select name="filter" id="">
@@ -46,7 +47,7 @@ const Dining = () => {
                 <div className="bedroom-all-products">
                     <div className="row g-4">
                         {
-                            showProduct.map((productData) => <DiningProduct
+                            bedroomProduct?.map((productData) => <DiningProduct
                                 key={productData.id}
                                 productData={productData}
                             ></DiningProduct>)
@@ -54,6 +55,7 @@ const Dining = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     );
 };

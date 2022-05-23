@@ -2,7 +2,7 @@ import React from 'react';
 import './ArrivalProduct.css'
 
 const ArrivalProduct = ({ products }) => {
-    const { name, img, sale, beforePrice, price, stock } = products;
+    const { name, img, sale, beforePrice, price, stock, category } = products;
 
     return (
         <>

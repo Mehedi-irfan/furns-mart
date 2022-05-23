@@ -35,5 +35,33 @@
 }
 .bedroom-all-products {
   width: 90%;
-  margin: 80px auto;
+  margin: 30px 50px auto;
+}
+.about-link a {
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 668px) {
+  .bedroom-all-products {
+    margin: 0 auto;
+  }
+  .bedroom-products .bedroom-filter-bar {
+    margin: 40px auto;
+    padding: 8px 10px;
+  }
+  .sort-by {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+  }
+  .bedroom-filter-bar h6 {
+    font-size: 13px;
+  }
+  .sort-by h6 {
+    display: none;
+  }
+  .sort-by select {
+    width: 100%;
+    padding: 5px 5px;
+  }
 }

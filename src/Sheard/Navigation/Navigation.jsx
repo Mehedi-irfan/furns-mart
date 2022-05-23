@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../asstes/images/logo.png';
 import './Navigation.css';
 
-const Navigation = ({ filterData }) => {
+const Navigation = () => {
     const [showNavbar, setShowNavbar] = useState(false);
 
     return (
@@ -30,24 +30,50 @@ const Navigation = ({ filterData }) => {
                     <ul className='menubar'>
                         <li><Link to='/home'>Home</Link></li>
                         <li><Link to='/about'>About</Link></li>
-                        <li className='dropdwon-button'><Link to='/homeFurniture'>Home Furniture</Link>
+                        <li className='dropdwon-button'><Link to='/'>Home Furniture</Link>
                             <ul className='dropdown-menubar'>
-                                <li><button onClick={() => filterData('bedroom')}>Bedroom</button></li>
-                                <li><button onClick={() => filterData('dining')}>Dinig</button></li>
-                                <li><button onClick={() => filterData('living')}>Living</button></li>
+                                <li>
+                                    <Link to='/category/bedroom'>
+                                        <button>Bedroom</button>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to='/category/dining'>
+                                        <button>Dinig</button>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to='/category/living'>
+                                        <button>Living</button>
+                                    </Link>
+                                </li>
                             </ul>
                         </li>
                         <li className='dropdwon-button1'><Link to='/hospitalFurniture'>Hospital Furniture</Link>
                             <ul className='dropdown-menubar1'>
-                                <li><Link to='/lounge'>Lounge</Link></li>
-                                <li><Link to='/officeChair'>Office Chair</Link></li>
-                                <li><Link to='/officeTabel'>Office Tabel</Link></li>
+                                <li><Link to='/category/lounge'>
+                                    <button>Lounge</button>
+                                </Link></li>
+                                <li><Link to='/category/officeChair'>
+                                    <button>Office Chair</button>
+                                </Link></li>
+                                <li><Link to='/category/officeTabel'>
+                                    <button>
+                                        Office Tabel
+                                    </button>
+                                </Link></li>
                             </ul>
                         </li>
                         <li className='dropdwon-button2'><Link to='/officeFurniture'>Office Furniture</Link>
                             <ul className='dropdown-menubar2'>
-                                <li><Link to='/hospitalBed'>Hospital Bed</Link></li>
-                                <li><Link to='/hospitalUtility'>Hospital Utility</Link></li>
+                                <li><Link to='/category/hospitalBed'>
+                                    <button>
+                                        Hospital Bed
+                                    </button>
+                                </Link></li>
+                                <li><Link to='/category/hospitalUtility'>
+                                    <button>Hospital Utility</button>
+                                </Link></li>
                             </ul>
                         </li>
                         <li><Link to='/contact'>Contact</Link></li>

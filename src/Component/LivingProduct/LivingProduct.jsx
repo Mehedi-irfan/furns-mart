@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BedroomProduct = ({ productData }) => {
+const LivingProduct = ({ productData }) => {
     const { title, img, sale, stock, price } = productData;
     return (
         <>
@@ -26,7 +26,7 @@ const BedroomProduct = ({ productData }) => {
                         </div>
                     </div>
                     <div className="card-content text-center mt-3">
-                        <h6>{title?.slice(0, 20)}</h6>
+                        <h6>{title.slice(0, 20)}</h6>
                         <h5 className='d-inline-flex'><p className='text-decoration-line-through fw-lighter text-secondary'></p> <p className='price'>${price}</p></h5>
                     </div>
                 </div>
@@ -35,4 +35,4 @@ const BedroomProduct = ({ productData }) => {
     );
 };
 
-export default BedroomProduct;
+export default LivingProduct;

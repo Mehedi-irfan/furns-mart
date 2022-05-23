@@ -11,7 +11,6 @@ const NewArrible = () => {
     return (
         <div>
             <div className="row row-cols-1 row-cols-md-4 g-4 mt-5">
-
                 {
                     !arrivalProduct ? <div class="spinner-border mx-auto" role="status">
                         <span class="visually-hidden ">Loading...</span>

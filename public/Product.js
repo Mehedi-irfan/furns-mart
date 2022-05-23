@@ -1,4 +1,3 @@
-
 const products = [
     {
         id: 1,
@@ -10,7 +9,8 @@ const products = [
         color: "Gray, Green, Chocolate, Blue",
         size: " Semi Double, Double, Single",
         Material: ' Wood, Metal, Leather',
-        img: "https://i.ibb.co/F0KW18W/product.jpg"
+        img: "https://i.ibb.co/sQQHjc4/product.jpg",
+        category: 'onsale'
     },
     {
         id: 2,
@@ -21,7 +21,8 @@ const products = [
         color: "Gray, Green, Chocolate, Blue",
         size: " Semi Double, Double, Single",
         Material: ' Wood, Metal, Leather',
-        img: "https://i.ibb.co/RDd4DfG/product2.jpg"
+        img: "https://i.ibb.co/G0Z226Q/product2.jpg",
+        category: 'feature'
     },
     {
         id: 3,
@@ -32,7 +33,8 @@ const products = [
         color: "Gray, Green, Chocolate, Blue",
         size: " Semi Double, Double, Single",
         Material: ' Wood, Metal, Leather',
-        img: "https://i.ibb.co/2NzFZvz/product3.jpg"
+        img: "https://i.ibb.co/RHzs3V1/product3.jpg",
+        category: 'teding'
     },
     {
         id: 4,
@@ -42,7 +44,8 @@ const products = [
         color: "Gray, Green, Chocolate, Blue",
         size: " Semi Double, Double, Single",
         Material: ' Wood, Metal, Leather',
-        img: "https://i.ibb.co/nzNFc5r/product4.jpg"
+        img: "https://i.ibb.co/mhTpGfn/product4.jpg",
+        category: 'feature'
     },
     {
         id: 5,
@@ -54,7 +57,8 @@ const products = [
         size: " Semi Double, Double, Single",
         Material: ' Wood, Metal, Leather',
         sale: '16%',
-        img: "https://i.ibb.co/W0nVPzZ/product5.jpg"
+        img: "https://i.ibb.co/M6BrJF6/product5.jpg",
+        category: 'onsale'
     },
     {
         id: 6,
@@ -66,7 +70,8 @@ const products = [
         size: " Semi Double, Double, Single",
         Material: ' Wood, Metal, Leather',
         sale: '32%',
-        img: "https://i.ibb.co/TTk8Y3n/product6.jpg"
+        img: "https://i.ibb.co/BjfLd75/product6.jpg",
+        category: 'teding'
     },
     {
         id: 7,
@@ -76,7 +81,8 @@ const products = [
         color: "Gray, Green, Chocolate, Blue",
         size: " Semi Double, Double, Single",
         Material: ' Wood, Metal, Leather',
-        img: "https://i.ibb.co/fSs84Tg/product7.jpg"
+        img: "https://i.ibb.co/MkpSwKY/product7.jpg",
+        category: 'feature'
     },
     {
         id: 8,
@@ -88,7 +94,8 @@ const products = [
         size: " Semi Double, Double, Single",
         Material: ' Wood, Metal, Leather',
         sale: "38%",
-        img: "https://i.ibb.co/3pXWs9Z/product8.jpg"
+        img: "https://i.ibb.co/XxTgssT/product8.jpg",
+        category: 'onsale'
     },
     {
         id: 9,
@@ -100,7 +107,8 @@ const products = [
         size: " Semi Double, Double, Single",
         Material: ' Wood, Metal, Leather',
         sale: '52%',
-        img: "https://i.ibb.co/rkg5j07/product10.jpg"
+        img: "https://i.ibb.co/tz3CQZy/product10.jpg",
+        category: 'teding'
     },
     {
         id: 10,
@@ -110,7 +118,8 @@ const products = [
         color: "Gray, Green, Chocolate, Blue",
         size: " Semi Double, Double, Single",
         Material: ' Wood, Metal, Leather',
-        img: "https://i.ibb.co/CHyRjrb/product11.jpg"
+        img: "https://i.ibb.co/xXt0VHN/product11.jpg",
+        category: 'feature'
     },
     {
         id: 11,
@@ -122,7 +131,8 @@ const products = [
         size: " Semi Double, Double, Single",
         Material: ' Wood, Metal, Leather',
         sale: '3%',
-        img: "https://i.ibb.co/BLyZSWH/product12.jpg"
+        img: "https://i.ibb.co/pK210ks/product12.jpg",
+        category: 'teding'
     },
     {
         id: 12,
@@ -132,7 +142,8 @@ const products = [
         color: "Gray, Green, Chocolate, Blue",
         size: " Semi Double, Double, Single",
         Material: ' Wood, Metal, Leather',
-        img: "https://i.ibb.co/27rgDRK/product13.jpg"
+        img: "https://i.ibb.co/ygXX0VP/product13.jpg",
+        category: 'onsale'
     },
     {
         id: 13,
@@ -144,7 +155,8 @@ const products = [
         size: " Semi Double, Double, Single",
         Material: ' Wood, Metal, Leather',
         sale: '22%',
-        img: "https://i.ibb.co/2n46kJS/product14.jpg"
+        img: "https://i.ibb.co/3Cs8Y1D/product14.jpg",
+        category: 'feature'
     },
     {
         id: 14,
@@ -156,7 +168,8 @@ const products = [
         size: " Semi Double, Double, Single",
         Material: ' Wood, Metal, Leather',
         sale: '62%',
-        img: "https://i.ibb.co/x1HzKF9/product15.jpg"
+        img: "https://i.ibb.co/dQnPJXN/product15.jpg",
+        category: 'onsale'
     }
 
 ]

@@ -1,40 +1,39 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../../Sheard/Navigation/Navigation';
+import { Link, useParams } from 'react-router-dom';
 import BedroomProduct from '../BedroomProduct/BedroomProduct';
-import Footer from '../../Sheard/Footer/Footer'
-import './Bedroom.css'
+import '../Bedroom/Bedroom.css';
 
-const Bedroom = () => {
-    const [bedroomProduct, setBedroomProduct] = useState([]);
+const CategoryWiseFurniture = () => {
+    const [productData, setProductData] = useState([]);
+    const [categoryWiseProduct, setCategoryWiseProduct] = useState([]);
+    const { categoryId } = useParams();
 
     useEffect(() => {
-        fetch('./Produtcs.JSON')
+        fetch('/Produtcs.JSON')
             .then(res => res.json())
             .then(data => {
-                setBedroomProduct(data)
+                setProductData(data)
             })
     }, []);
 
-    const filterData = (cate) => {
-        const filterProduct = bedroomProduct.filter((product) => product?.category === cate)
-        setBedroomProduct(filterProduct);
-    }
+    useEffect(() => {
+        const filterProduct = productData.filter((product) => product?.category === categoryId)
+        setCategoryWiseProduct(filterProduct);
+    }, [categoryId, productData])
 
     return (
         <>
-            <Navigation filterData={filterData} />
             <div className="about-header-conter">
-                <h1>BEDROOM</h1>
+                <h1>{categoryWiseProduct[0]?.category}</h1>
                 <div className="about-link">
                     <Link to='/'>HOME</Link>   /
                     <Link to='/'>   COLLECTION</Link>   /
-                    <Link to='/'>   BEDROOM</Link>
+                    <Link to='/'>   {categoryWiseProduct[0]?.category}</Link>
                 </div>
             </div>
             <div className="bedroom-products">
                 <div className="bedroom-filter-bar">
-                    <h6>Showing {bedroomProduct.length} Products</h6>
+                    <h6>Showing {categoryWiseProduct.length} Products</h6>
                     <div className='sort-by'>
                         <h6>Sort by</h6>
                         <select name="filter" id="">
@@ -47,7 +46,7 @@ const Bedroom = () => {
                 <div className="bedroom-all-products">
                     <div className="row g-4">
                         {
-                            bedroomProduct.map((productData) => <BedroomProduct
+                            categoryWiseProduct.map((productData) => <BedroomProduct
                                 key={productData.id}
                                 productData={productData}
                             ></BedroomProduct>)
@@ -55,9 +54,8 @@ const Bedroom = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </>
     );
 };
 
-export default Bedroom;
+export default CategoryWiseFurniture;

@@ -1,0 +1,68 @@
+.contact-section {
+  width: 90%;
+  margin: 50px auto;
+}
+.contect-desc {
+  background-color: rgb(244, 245, 248);
+  padding: 50px 40px;
+  height: 100%;
+}
+.phone {
+  margin-top: 25px;
+  display: flex;
+}
+.phone .phone-phone {
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 0;
+  width: 75px;
+  text-align: start;
+}
+.phone-number {
+  margin-left: 20px;
+}
+.phone-number p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.email-container {
+  background-color: rgb(244, 245, 248);
+  padding: 50px 40px;
+}
+.submit-btn {
+  width: 100%;
+  background-color: rgb(249 132 17);
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  outline: none;
+  transition: all 0.4s ease-in;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+.submit-btn:focus {
+  outline: none;
+  border: none;
+}
+.submit-btn:hover {
+  background-color: #222;
+}
+.email-section input {
+  outline: none;
+}
+.email-section input:focus {
+  outline: none;
+  border: 1px solid rgb(249, 132, 17) !important;
+}
+
+.email-section textarea:focus {
+  outline: none;
+  border: 1px solid rgb(249, 132, 17) !important;
+}
+.form-control:focus {
+  border: none;
+  box-shadow: none;
+}
