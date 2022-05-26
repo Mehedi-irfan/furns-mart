@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const BedroomProduct = ({ productData }) => {
-    const { title, img, sale, stock, price } = productData;
+    const { title, img, sale, stock, price, id } = productData;
     return (
         <>
             <div className="col-md-3 col-sm-6">
@@ -22,7 +23,9 @@ const BedroomProduct = ({ productData }) => {
                                 <i class="bi bi-view-list"></i>
                                 <i class="bi bi-disc"></i>
                             </div>
-                            <button><i class="bi bi-info-circle-fill"></i> See More Details</button>
+                            <Link to={`/categoryFurniture/${id}`}>
+                                <button><i class="bi bi-info-circle-fill"></i> See More Details</button>
+                            </Link>
                         </div>
                     </div>
                     <div className="card-content text-center mt-3">

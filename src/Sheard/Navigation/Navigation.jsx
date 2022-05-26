@@ -1,86 +1,104 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../asstes/images/logo.png';
 import './Navigation.css';
 
 const Navigation = () => {
-    const [showNavbar, setShowNavbar] = useState(false);
+    const navRef = useRef();
+    const search = useRef();
+
+    const clearBar = () => {
+        search.current.classList.toggle('clear-var')
+    }
+
+    const showNavBar = () => {
+        navRef.current.classList.toggle('responsive-nav')
+    }
 
     return (
-        <div>
-            <div className='container mt-4'>
-                <div className="main-nav">
-                    <div className="logo">
-                        <i onClick={() => setShowNavbar(!showNavbar)} class="fa-solid fa-bars"></i>
-                        <img data-aos="fade-right"
-                            data-aos-easing="ease-in"
-                            data-aos-duration="1000" src={logo} alt="" />
-                    </div>
-                    <div className="nav-icon" data-aos="fade-left"
-                        data-aos-easing="ease-in"
-                        data-aos-duration="1000">
-                        <i className="bi bi-search"></i>
-                        <i className="bi bi-person"></i>
-                        <i className="bi bi-bag"></i>
+        <>
+            <div ref={search}>
+                <div className="top-nav-bar ">
+                    <div className="row " id='top-navbar'>
+                        <div className="col-md-6 ">
+                            <div className="logo-img">
+                                <img src={logo} alt="" />
+                            </div>
+                        </div>
+                        <div className="col-md-6 ">
+                            <div className="top-navbar-icon">
+                                <ul>
+                                    <li><i onClick={clearBar} class="bi bi-search"></i></li>
+                                    <li><i class="bi bi-person user-icon"></i></li>
+                                    <li><i class="bi bi-bag-heart"></i>
+                                        <span className='cart-number'>0</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                {/* search bar  */}
+
+                <div className="search-bar-section">
+                    <div className="search-bar">
+                        <input type="text" placeholder='Enter your Search Keyword.....' />
+                        <i class="bi bi-search"></i>
+                    </div>
+                    <div className="claer-icon">
+                        <i onClick={clearBar} class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                {/* main nav bar  */}
             </div>
-            <div className={showNavbar ? 'main-header menu-link' : 'main-header'}>
-                <nav className="nav-section">
-                    <ul className='menubar'>
-                        <li><Link to='/home'>Home</Link></li>
-                        <li><Link to='/about'>About</Link></li>
-                        <li className='dropdwon-button'><Link to='/'>Home Furniture</Link>
-                            <ul className='dropdown-menubar'>
-                                <li>
-                                    <Link to='/category/bedroom'>
-                                        <button>Bedroom</button>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to='/category/dining'>
-                                        <button>Dinig</button>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to='/category/living'>
-                                        <button>Living</button>
-                                    </Link>
-                                </li>
+
+            <div className="main-navbar-section">
+                <div className="hamburger-menu">
+                    <i onClick={showNavBar} class="bi bi-list"></i>
+                </div>
+
+                <nav>
+                    <ul ref={navRef} className='main-navbar'>
+                        <div className="cross-bar">
+                            <i onClick={showNavBar} class="bi bi-x"></i>
+                        </div>
+                        <li>
+                            <Link to='/'>Home</Link>
+                        </li>
+                        <li>
+                            <Link to='/about'>About</Link>
+                        </li>
+                        <li>
+                            <Link to='/'>Home Furniture <i class="bi bi-caret-down-fill"></i></Link>
+                            <ul className='drop-down-menu' id='home-furniture-dropdown'>
+                                <li><Link to='/category/bedroom'>Bedroom</Link></li>
+                                <li><Link to='/category/dining'>Dining</Link></li>
+                                <li><Link to='/category/living'>Living</Link></li>
                             </ul>
                         </li>
-                        <li className='dropdwon-button1'><Link to='/hospitalFurniture'>Hospital Furniture</Link>
-                            <ul className='dropdown-menubar1'>
-                                <li><Link to='/category/lounge'>
-                                    <button>Lounge</button>
-                                </Link></li>
-                                <li><Link to='/category/officeChair'>
-                                    <button>Office Chair</button>
-                                </Link></li>
-                                <li><Link to='/category/officeTabel'>
-                                    <button>
-                                        Office Tabel
-                                    </button>
-                                </Link></li>
+                        <li>
+                            <Link to='/'>Office Furniture <i class="bi bi-caret-down-fill"></i></Link>
+                            <ul className='drop-down-menu' id='office-furniture-dropdown'>
+                                <li><Link to='/category/lounge'>Lounge</Link></li>
+                                <li><Link to='/category/officeChair'>Office Chair</Link></li>
+                                <li><Link to='/category/officeTabel'>Office Table</Link></li>
                             </ul>
                         </li>
-                        <li className='dropdwon-button2'><Link to='/officeFurniture'>Office Furniture</Link>
-                            <ul className='dropdown-menubar2'>
-                                <li><Link to='/category/hospitalBed'>
-                                    <button>
-                                        Hospital Bed
-                                    </button>
-                                </Link></li>
-                                <li><Link to='/category/hospitalUtility'>
-                                    <button>Hospital Utility</button>
-                                </Link></li>
+                        <li>
+                            <Link to='/'>Hospital Furniture <i class="bi bi-caret-down-fill"></i></Link>
+                            <ul className='drop-down-menu' id='hospital-furniture-dropdown'>
+                                <li><Link to='/category/hospitalBed'>Hospital Bed</Link></li>
+                                <li><Link to='/category/hospitalUtility'>Hospital Utility</Link></li>
                             </ul>
                         </li>
-                        <li><Link to='/contact'>Contact</Link></li>
+                        <li>
+                            <Link to='/contact'>Contact</Link>
+                        </li>
                     </ul>
                 </nav>
             </div>
-        </div >
+        </ >
     );
 };
 

@@ -9,34 +9,26 @@ import officeLogo from '../../asstes/images/office-chair.png';
 const Logos = () => {
     return (
         <div>
+
             <div className="logos-section">
-                <div className="logos" data-aos="fade-down"
-                    data-aos-easing="linear"
-                    data-aos-duration="1000">
+                <div className="logos" >
                     <img src={bedroomLogo} alt="" />
                     <p>Bedroom</p>
                 </div>
-                <div className="logos" data-aos="fade-down"
-                    data-aos-easing="linear"
-                    data-aos-duration="1000">
+                <div className="logos" >
                     <img src={livingLogo} alt="" />
                     <p>Living</p>
                 </div>
-                <div className="logos" data-aos="fade-down"
-                    data-aos-easing="linear"
-                    data-aos-duration="1000">
+                <div className="logos" >
                     <img src={diningLogo} alt="" />
                     <p>Dining</p>
                 </div>
-                <div className="logos" data-aos="fade-down"
-                    data-aos-easing="linear"
-                    data-aos-duration="1000">
+
+                <div className="logos">
                     <img src={loungeLogo} alt="" />
                     <p>Lounge</p>
                 </div>
-                <div className="logos" data-aos="fade-down"
-                    data-aos-easing="linear"
-                    data-aos-duration="1000">
+                <div className="logos" >
                     <img src={officeLogo} alt="" />
                     <p>Office Chair</p>
                 </div>

@@ -14,6 +14,10 @@ import CategoryWiseFurniture from './Component/CategoryWiseFurniture/CategoryWis
 import Navigation from './Sheard/Navigation/Navigation';
 import Footer from './Sheard/Footer/Footer';
 import CartButton from './Component/CartButton/CartButton';
+import Furniture from './Component/Furniture/Furniture';
+import CategoryFurniture from './Component/CategoryFurniture/CategoryFurniture';
+import AllProducts from './Component/AllProducts/AllProducts';
+import SingleBlog from './Component/SingleBlog/SingleBlog';
 
 function App() {
   return (
@@ -26,6 +30,10 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/' element={<HomeFurniture />} />
         <Route path='/category/:categoryId' element={<CategoryWiseFurniture></CategoryWiseFurniture>} />
+        <Route path='/furniture/:furnitureId' element={<Furniture />}></Route>
+        <Route path='/Categoryfurniture/:categoryFurnitureId' element={<CategoryFurniture />}></Route>
+        <Route path='/allProducts' element={<AllProducts />}></Route>
+        <Route path='/blogs/:blogId' element={<SingleBlog />} />
         <Route path='/' element={<HospitalFurniture />} />
         <Route path='/' element={<OfficeFurniture />} />
         <Route path='/contact' element={<Contact />} />

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Blogs.css';
 
 const Blogs = ({ blog }) => {
-    const { title, desc, date, author, img } = blog;
+    const { title, desc, date, author, img, id } = blog;
 
     return (
         <div className="col-md-4 col-sm-12">
@@ -20,7 +20,7 @@ const Blogs = ({ blog }) => {
                     <p className="card-text" id='card-desc'>{desc}</p>
                 </div>
                 <div className="read-more-btn">
-                    <Link to='/'>
+                    <Link to={`/blogs/${id}`}>
                         <button>Read More</button>
                     </Link>
                 </div>

@@ -1,0 +1,291 @@
+.funrniture-product {
+  width: 90%;
+  margin: 100px auto;
+}
+.furniture-img {
+  width: 100%;
+  height: 100%;
+}
+.furniture-img img {
+  width: 100%;
+  object-fit: cover;
+}
+.furniture-content {
+  margin: 0;
+}
+.furniture-content .furniture-text p {
+  margin: 6px 0px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-family: cursive;
+}
+.furniture-content .furniture-text h3 {
+  font-size: 35px;
+  letter-spacing: 0.5px;
+  font-family: sans-serif;
+  font-weight: 600;
+  padding-bottom: px;
+}
+.price p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.furniture-desc {
+  margin: 0;
+  padding: 10px 0px;
+  letter-spacing: 0.5px;
+  font-family: cursive;
+}
+.matrial-section select {
+  width: 300px;
+  padding: 8px 5px;
+  border: 1px solid rgb(255 131 7);
+  margin-bottom: 5px;
+}
+.size-section select,
+.color-section select {
+  width: 300px;
+  padding: 8px 5px;
+  border: 1px solid rgb(255 131 7);
+  margin-bottom: 5px;
+}
+.matrial-section select,
+.size-section select:focus {
+  outline: none;
+  border: 1px solid rgb(255 131 7);
+}
+.matrial-section option {
+  border: 1px solid rgb(255 131 7);
+}
+.input-section button {
+  background: transparent;
+  color: rgb(255 131 7);
+  border: 1px solid rgb(255 131 7);
+  padding: 7px 9px;
+  font-size: 18px;
+}
+.input-section input {
+  width: 52px;
+  padding: 9px 0px;
+  text-align: center;
+  border: 1px solid rgb(255 131 7);
+  color: rgb(255 131 7);
+}
+.shop-btn {
+  margin-left: 24px;
+  padding: 8px 25px !important;
+  border: none !important;
+  background-color: rgb(255 131 7) !important;
+  color: #fff !important;
+  font-family: cursive;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  transition: all 0.5s ease-in;
+}
+.shop-btn:hover {
+  background-color: #222 !important;
+}
+.whistel-compare {
+  display: flex;
+  padding-top: 15px;
+  cursor: pointer;
+}
+.whistel-compare p:last-child {
+  margin-left: 20px;
+  transition: all 0.3s ease-in;
+}
+.whistel-compare p:hover {
+  color: rgb(255 131 7);
+}
+.socail-media {
+  display: flex;
+  color: #6a6969;
+  margin-top: -9px;
+}
+.socail-media ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.socail-media ul li {
+  margin: 0 10px;
+}
+.socail-media ul li i {
+  color: #6a6969;
+  transition: all 0.3s ease-in;
+}
+.socail-media ul li i:hover {
+  color: rgb(255 131 7);
+}
+.furniture-tab {
+  width: 90%;
+  margin: 50px auto;
+}
+.react-tabs__tab--selected {
+  background: #fff;
+  border-color: rgb(255 131 7);
+  color: black;
+  border-radius: 5px 5px 0 0;
+}
+.react-tabs__tab-list {
+  border-bottom: 0px solid #aaa;
+  text-align: center;
+  font-size: 21px;
+  margin-bottom: 1px;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  color: #656566 !important;
+  transition: all 0.4s linear;
+}
+.react-tabs__tab-list li:hover {
+  color: rgb(255 131 7);
+}
+
+.react-tabs__tab-list li:focus {
+  color: rgb(255 131 7) !important;
+}
+.react-tabs__tab-panel--selected {
+  display: block;
+  border: 1px solid rgb(188, 188, 188);
+  padding: 35px;
+  border-radius: 5px;
+}
+
+.frist-tab p {
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  font-family: cursive;
+  color: #6e6c6c;
+}
+/* review message section  */
+.review-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ratings {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+.ratings li {
+  margin: 2px 3px;
+  font-size: 13px;
+  color: orange;
+}
+.review-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.review-message .user-icon {
+  font-size: 50px;
+  border: 2px solid #aaa;
+  padding: 33px;
+  border-radius: 50%;
+}
+.review-content {
+  margin-left: 20px;
+}
+.review-content h5 {
+  font-size: 19px;
+  margin: 0;
+  letter-spacing: 0.5px;
+  font-family: cursive;
+  font-weight: 500;
+}
+/* review rating  */
+.review-ratings {
+  display: flex;
+  align-items: center;
+}
+.start-rating {
+  font-size: 7px;
+  margin-left: 7px;
+  margin-top: -3px;
+}
+.startss {
+  color: #222;
+}
+.text-area label,
+.name label,
+.email label {
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  padding-bottom: 5px;
+}
+.text-area textarea,
+.name input,
+.email input {
+  outline: none;
+  border: 1px solid #bdbdbd;
+  padding: 4px 5px;
+}
+.text-area textarea:focus,
+.name input:focus,
+.email input:focus {
+  outline: none;
+  border: 1px solid rgb(255 131 7);
+}
+.review-name {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  width: 100%;
+  padding-bottom: 15px;
+}
+.name {
+  display: -ms-inline-grid;
+  width: 90%;
+}
+.email {
+  display: grid !important;
+  width: 90%;
+  margin-left: 30px;
+}
+.review-section h3 {
+  font-family: monospace;
+  font-size: 27px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+@media only screen and (max-width: 768px) {
+  .text-area textarea,
+  .name input,
+  .email input {
+    width: 100%;
+  }
+  .review-name {
+    display: flex;
+    flex-direction: column;
+  }
+  .email {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+  .name {
+    width: 100%;
+  }
+  .review-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .review-content {
+    text-align: center;
+  }
+  .ratings {
+    display: flex;
+    justify-content: center;
+  }
+  .furniture-content .furniture-text h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+}

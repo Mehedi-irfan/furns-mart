@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import './SimpleSlider.css'
 import sliderImg1 from '../../asstes/images/slider-1.png';
 import sliderImg2 from '../../asstes/images/slider-2.png';
+import { Link } from "react-router-dom";
 
 
 function SampleNextArrow(props) {
@@ -53,7 +54,9 @@ export default class SimpleSlider extends Component {
                   <h2>NEW PRODUCTS</h2>
                   <h1>Felxible Chair</h1>
                   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus enim iure molestiae harum ut ipsum rem suscipit delectus dolore sint?</p>
-                  <button>Shop Now</button>
+                  <Link to='/allProducts'>
+                    <button>Shop Now</button>
+                  </Link>
                 </div>
               </div>
               <div className="col-md-6 col-sm-12">
@@ -73,7 +76,9 @@ export default class SimpleSlider extends Component {
                   <h2>Best Seller</h2>
                   <h1>Creative Sofa</h1>
                   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus enim iure molestiae harum ut ipsum rem suscipit delectus dolore sint?</p>
-                  <button>Shop Now</button>
+                  <Link to='/allProducts'>
+                    <button>Shop Now</button>
+                  </Link>
                 </div>
               </div>
               <div className="col-md-6 col-sm-12">

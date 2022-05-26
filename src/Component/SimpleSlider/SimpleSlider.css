@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
   padding: 80px 50px;
+  margin: 0;
 }
 .slider-img img {
   width: 85%;

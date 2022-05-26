@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './ArrivalProduct.css'
 
 const ArrivalProduct = ({ products }) => {
-    const { name, img, sale, beforePrice, price, stock, category } = products;
+    const { name, img, sale, beforePrice, price, stock, id } = products;
 
     return (
         <>
@@ -24,7 +25,9 @@ const ArrivalProduct = ({ products }) => {
                                 <i class="bi bi-view-list"></i>
                                 <i class="bi bi-disc"></i>
                             </div>
-                            <button><i class="bi bi-info-circle-fill"></i> See More Details</button>
+                            <Link to={`/furniture/${id}`}>
+                                <button><i class="bi bi-info-circle-fill"></i> See More Details</button>
+                            </Link>
                         </div>
                     </div>
                     <div className="card-content text-center mt-3">
