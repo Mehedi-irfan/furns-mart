@@ -1,9 +1,14 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../asstes/images/logo.png';
+import { useCart } from 'react-use-cart'
 import './Navigation.css';
 
 const Navigation = () => {
+    const {
+        totalUniqueItems
+    } = useCart();
+
     const navRef = useRef();
     const search = useRef();
 
@@ -31,7 +36,7 @@ const Navigation = () => {
                                     <li><i onClick={clearBar} class="bi bi-search"></i></li>
                                     <li><i class="bi bi-person user-icon"></i></li>
                                     <li><i class="bi bi-bag-heart"></i>
-                                        <span className='cart-number'>0</span>
+                                        <span className='cart-number'>{totalUniqueItems}</span>
                                     </li>
                                 </ul>
                             </div>
