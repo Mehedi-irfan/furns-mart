@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './ArrivalProduct.css'
 
 const ArrivalProduct = ({ products }) => {
-    const { name, img, sale, beforePrice, price, stock, id } = products;
+    const { name, img, sale, beforePrice, price, stock, id, title } = products;
 
     return (
         <>
@@ -31,7 +31,7 @@ const ArrivalProduct = ({ products }) => {
                         </div>
                     </div>
                     <div className="card-content text-center mt-3">
-                        <h6>{name}</h6>
+                        <h6>{name ? name : title}</h6>
                         <h5 className='d-inline-flex'><p className='text-decoration-line-through fw-lighter text-secondary'>{beforePrice}</p> <p className='price'>${price}</p></h5>
                     </div>
                 </div>

@@ -178,7 +178,7 @@
 }
 .review-message {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 .review-message .user-icon {

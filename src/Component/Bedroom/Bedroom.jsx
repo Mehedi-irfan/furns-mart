@@ -9,7 +9,7 @@ const Bedroom = () => {
     const [bedroomProduct, setBedroomProduct] = useState([]);
 
     useEffect(() => {
-        fetch('./Produtcs.JSON')
+        fetch('/Produtcs.JSON')
             .then(res => res.json())
             .then(data => {
                 setBedroomProduct(data)

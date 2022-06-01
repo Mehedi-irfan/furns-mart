@@ -43,7 +43,7 @@ const CartButton = ({ cart }) => {
                                                     <img className='img-fluid' src={item.img} alt="" />
                                                 </div>
                                                 <div className="col-md-7 cart-content">
-                                                    <h6>{item.name.slice(0, 20)}</h6>
+                                                    <h6>{item.name?.slice(0, 20)}</h6>
                                                     <p className='m-0'>Price : ${item.price}</p>
                                                     <p className='mb-2'>Quantity :- {item.quantity}</p>
                                                     <div className="cart-btn">
@@ -64,7 +64,7 @@ const CartButton = ({ cart }) => {
 
                 <div className="cart-footer">
                     <p>Total Price</p>
-                    <p>${cartTotal}</p>
+                    <p>${cartTotal.toFixed(2)}</p>
                 </div>
             </div>
         </div>

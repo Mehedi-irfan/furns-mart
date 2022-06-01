@@ -3,7 +3,7 @@ import { useCart } from 'react-use-cart';
 import '../Furniture/Furniture.css'
 
 const SingleFurniture = ({ furn }) => {
-    const { img, stock, sale, name, price, beforePrice, Material, size, color } = furn;
+    const { img, stock, sale, name, price, beforePrice, Material, size, color, title } = furn;
     const { addItem } = useCart()
     return (
         <>
@@ -15,9 +15,9 @@ const SingleFurniture = ({ furn }) => {
             <div className="col-md-7 col-sm-6">
                 <div className="furniture-content">
                     <div className="furniture-text">
-                        <p>Stock :- {stock}</p>
+                        <p>Stock :- {stock ? stock : 28}</p>
                         <p>Sale :- {sale ? sale : 520}</p>
-                        <h3>{name}</h3>
+                        <h3>{name ? name : title}</h3>
                     </div>
                     <div className="price m-0 ">
                         <p className='d-flex'>Price :- <p className='text-secondary text-decoration-line-through mx-2'>{beforePrice}</p> ${price}</p>
@@ -26,32 +26,32 @@ const SingleFurniture = ({ furn }) => {
 
                     {/* matrial section  */}
                     {
-                        furn && <div className="all-mertail py-3">
+                        furn.Material && <div className="all-mertail py-3">
                             <div className="matrial-section">
                                 <h6>Material</h6>
                                 <select name="" id="">
-                                    <option value="">{Material.slice(0, 5)}</option>
-                                    <option value="">{Material.slice(6, 12)}</option>
-                                    <option value="">{Material.slice(13, 21)}</option>
+                                    <option value="">{Material?.slice(0, 5)}</option>
+                                    <option value="">{Material?.slice(6, 12)}</option>
+                                    <option value="">{Material?.slice(13, 21)}</option>
                                 </select>
                             </div>
                             {/* size section  */}
                             <div className="size-section">
                                 <h6>Size</h6>
                                 <select name="" id="">
-                                    <option value="">{size.slice(0, 12)}</option>
-                                    <option value="">{size.slice(13, 20)}</option>
-                                    <option value="">{size.slice(21, 28)}</option>
+                                    <option value="">{size?.slice(0, 12)}</option>
+                                    <option value="">{size?.slice(13, 20)}</option>
+                                    <option value="">{size?.slice(21, 28)}</option>
                                 </select>
                             </div>
                             {/* color section  */}
                             <div className="color-section">
                                 <h6>Color</h6>
                                 <select name="" id="">
-                                    <option value="">{color.slice(0, 4)}</option>
-                                    <option value="">{color.slice(5, 11)}</option>
-                                    <option value="">{color.slice(12, 22)}</option>
-                                    <option value="">{color.slice(23, 29)}</option>
+                                    <option value="">{color?.slice(0, 4)}</option>
+                                    <option value="">{color?.slice(5, 11)}</option>
+                                    <option value="">{color?.slice(12, 22)}</option>
+                                    <option value="">{color?.slice(23, 29)}</option>
                                 </select>
                             </div>
                         </div>

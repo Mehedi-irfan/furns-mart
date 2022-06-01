@@ -12,11 +12,13 @@ const Furniture = () => {
     const [furnitureProduct, setFurnitureProduct] = useState([]);
     const [displayFurniture, setDisplayFurniture] = useState([]);
     const [submit, setSubmit] = useState([]);
+    const [email, setEmail] = useState();
+    const [name, setName] = useState();
+    const [message, setMessage] = useState();
     const { furnitureId } = useParams();
 
-
     useEffect(() => {
-        fetch('/products.JSON')
+        fetch('/Produtcs.JSON')
             .then(res => res.json())
             .then(data => setFurnitureProduct(data))
     }, []);
@@ -26,18 +28,36 @@ const Furniture = () => {
         setDisplayFurniture(filterData);
     }, [furnitureProduct, furnitureId])
 
-    const handleSubmit = () => {
-        console.log("object");
+    const handleOnChange = (e) => {
+        setEmail(e.target.value);
+    }
+
+    const handleOnChaneName = (e) => {
+        setName(e.target.value)
+    }
+
+    const handleOnChangeMessage = e => {
+        setMessage(e.target.value);
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const fromData = {
+            name: name,
+            email: email,
+            message: message
+        }
+        setSubmit(fromData);
     }
 
     return (
         <>
             <div className="about-header-conter">
-                <h1>{displayFurniture[0]?.name}</h1>
+                <h1>{displayFurniture[0]?.name ? displayFurniture[0]?.name : displayFurniture[0]?.title}</h1>
                 <div className="about-link">
                     <Link to='/'>HOME</Link>   /
                     <Link to='/'>    PRODUCT</Link>  /
-                    <Link to='/'>   {displayFurniture[0]?.name}</Link>
+                    <Link to='/'>   {displayFurniture[0]?.name ? displayFurniture[0]?.name : displayFurniture[0]?.title}</Link>
                 </div>
             </div>
             <div className="funrniture-product">
@@ -54,7 +74,7 @@ const Furniture = () => {
                 <Tabs>
                     <TabList>
                         <Tab>Description</Tab>
-                        <Tab>Additional Info</Tab>
+                        {displayFurniture[0]?.Material && <Tab>Additional Info</Tab>}
                         <Tab>Reviews</Tab>
                     </TabList>
 
@@ -65,13 +85,13 @@ const Furniture = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quia, velit, reiciendis delectus nihil impedit debitis provident consectetur adipisci quae aperiam laboriosam hic aliquid recusandae est ipsa tenetur ad neque nemo eaque perferendis corporis nesciunt? Sunt molestias aspernatur autem, porro dolor omnis? Odio explicabo accusantium autem maxime, repellat a possimus?</p>
                         </div>
                     </TabPanel>
-                    <TabPanel>
+                    {displayFurniture[0]?.Material && <TabPanel>
                         <div className="second-tabs">
                             <h6>Matrial :- {displayFurniture[0]?.Material}</h6>
                             <h6 className='my-3'>Size :- {displayFurniture[0]?.size}</h6>
                             <h6>Color :- {displayFurniture[0]?.color}</h6>
                         </div>
-                    </TabPanel>
+                    </TabPanel>}
                     <TabPanel>
                         <div className="third-tabs">
                             <div className="row">
@@ -94,6 +114,22 @@ const Furniture = () => {
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio pariatur sit exercitationem facilis odit nesciunt</p>
                                         </div>
                                     </div>
+                                    {submit.name && <div className="review-message mt-4">
+                                        <div className="review-img">
+                                            <i class="fa-solid fa-user-tie user-icon"></i>
+                                        </div>
+                                        <div className="review-content">
+                                            <h5>{submit?.name}</h5>
+                                            <ul className='ratings'>
+                                                <li><i class="bi bi-star-fill"></i></li>
+                                                <li><i class="bi bi-star-fill"></i></li>
+                                                <li><i class="bi bi-star-fill"></i></li>
+                                                <li><i class="bi bi-star-fill"></i></li>
+                                                <li><i class="bi bi-star-fill"></i></li>
+                                            </ul>
+                                            <p>{submit?.message}</p>
+                                        </div>
+                                    </div>}
                                 </div>
 
                                 {/* review section  */}
@@ -101,7 +137,7 @@ const Furniture = () => {
                                     <div className="review-section">
                                         <h3>Add Your Review</h3>
                                     </div>
-                                    <form onClick={handleSubmit}>
+                                    <form onSubmit={handleSubmit}>
                                         <div className="review-ratings">
                                             <h6>Your Ratings :- </h6>
                                             <Rating className='start-rating'
@@ -111,22 +147,22 @@ const Furniture = () => {
                                         </div>
                                         <div className="text-area">
                                             <label htmlFor="">Message</label>
-                                            <textarea name="" id="" cols="60" rows="5"></textarea>
+                                            <textarea name="" id="" cols="60" rows="5" onChange={handleOnChangeMessage}></textarea>
                                         </div>
 
                                         <div className="review-name">
                                             <div className="name">
                                                 <label htmlFor="">Name</label>
-                                                <input type="text" />
+                                                <input type="text" onChange={handleOnChaneName} />
                                             </div>
 
                                             <div className="email">
                                                 <label htmlFor="">Email</label>
-                                                <input type="text" />
+                                                <input type="text" onChange={handleOnChange} />
                                             </div>
 
                                         </div>
-                                        <button type='submit' className='submit-btn'>Submit</button>
+                                        <button className='submit-btn'>Submit</button>
                                     </form>
                                 </div>
                             </div>

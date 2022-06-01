@@ -18,23 +18,13 @@ import { CartProvider } from 'react-use-cart';
 import { useState } from 'react';
 
 function App() {
-  const [cart, setCart] = useState([]);
 
-  const handleAddToCart = (product) => {
-    const newCart = [...cart, product];
-    setCart(newCart)
-    console.log(newCart);
-  }
-
-  const handleClearCart = () => {
-    setCart('');
-  }
 
   return (
     <CartProvider>
       <BrowserRouter>
-        <Navigation cart={cart} />
-        <CartButton cart={cart} handleClearCart={handleClearCart} />
+        <Navigation />
+        <CartButton />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
@@ -42,7 +32,7 @@ function App() {
           <Route path='/' element={<HomeFurniture />} />
           <Route path='/category/:categoryId' element={<CategoryWiseFurniture></CategoryWiseFurniture>} />
           <Route path='/furniture/:furnitureId' element={<Furniture />}></Route>
-          <Route path='/Categoryfurniture/:categoryFurnitureId' element={<CategoryFurniture handleAddToCart={handleAddToCart} handleClearCart={handleClearCart} />}></Route>
+          <Route path='/Categoryfurniture/:categoryFurnitureId' element={<CategoryFurniture />}></Route>
           <Route path='/allProducts' element={<AllProducts />}></Route>
           <Route path='/blogs/:blogId' element={<SingleBlog />} />
           <Route path='/' element={<HospitalFurniture />} />

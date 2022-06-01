@@ -23,7 +23,7 @@ const BedroomProduct = ({ productData }) => {
                                 <i class="bi bi-view-list"></i>
                                 <i class="bi bi-disc"></i>
                             </div>
-                            <Link to={`/categoryFurniture/${id}`}>
+                            <Link to={`/furniture/${id}`}>
                                 <button><i class="bi bi-info-circle-fill"></i> See More Details</button>
                             </Link>
                         </div>

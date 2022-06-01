@@ -8,7 +8,7 @@ const OurProducts = () => {
     const [filterCategory, setFilterCategory] = useState([]);
     const [furnitureCategory, setFurnitureCayegory] = useState('feature');
     useEffect(() => {
-        fetch('/products.JSON')
+        fetch('/Produtcs.JSON')
             .then(res => res.json())
             .then(data => setArrivalProducts(data))
     }, []);

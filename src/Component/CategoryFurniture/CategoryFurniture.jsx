@@ -14,7 +14,7 @@ const CategoryFurniture = ({ handleAddToCart }) => {
 
 
     useEffect(() => {
-        fetch('/produtcs.JSON')
+        fetch('/Produtcs.JSON')
             .then(res => res.json())
             .then(data => setFurnitureProduct(data))
     }, []);
@@ -25,7 +25,7 @@ const CategoryFurniture = ({ handleAddToCart }) => {
     }, [furnitureProduct, categoryFurnitureId])
 
     const handleSubmit = (event) => {
-        event.preventDefault();
+        event.preventDefault()
         console.log("first")
     }
     console.log(displayFurniture);

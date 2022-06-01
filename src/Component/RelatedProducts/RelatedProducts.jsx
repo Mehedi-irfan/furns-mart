@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 const RelatedProducts = () => {
     const [slider, setSlider] = useState([]);
     useEffect(() => {
-        fetch('/products.JSON')
+        fetch('/Produtcs.JSON')
             .then(res => res.json())
             .then(data => setSlider(data))
     }, [])
@@ -68,7 +68,7 @@ const RelatedProducts = () => {
                                         </div>
                                     </div>
                                     <div className="card-content text-center mt-3">
-                                        <h6>{slide.name}</h6>
+                                        <h6>{slide.name ? slide.name : slide.title}</h6>
                                         <h5 className='d-inline-flex'><p className='text-decoration-line-through fw-lighter text-secondary'>{slide.beforePrice}</p> <p className='price'>${slide.price}</p></h5>
                                     </div>
                                 </div>
