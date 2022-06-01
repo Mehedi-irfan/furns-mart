@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Rating from 'react-rating';
 import { Link, useParams } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { useCart } from 'react-use-cart';
 import 'react-tabs/style/react-tabs.css';
 import RelatedProducts from '../RelatedProducts/RelatedProducts';
 import './Furniture.css'
